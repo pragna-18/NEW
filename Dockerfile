@@ -1,5 +1,9 @@
-FROM openjdk:17
+FROM eclipse-temurin:17
+
 WORKDIR /app
+
 COPY . /app
-RUN javac sample.java
-CMD ["java","sample"]
+
+RUN javac HelloWorld.java
+
+CMD ["java", "HelloWorld"]
